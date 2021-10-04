@@ -1,0 +1,30 @@
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TesteCampoTreinamento {
+	
+	@Test
+	
+	public void teste() {
+		
+		WebDriver driver = new ChromeDriver();
+		
+		
+		driver.manage().window().maximize();
+		driver.get("http://www.google.com");
+		Assert.assertEquals("file:///C:/Users/johnathan.ferreira/Desktop/componentes.html");
+		
+		
+		
+		
+		
+		//Fechar Driver
+		driver.quit();
+		
+		
+		
+	}
+	
+
+}
