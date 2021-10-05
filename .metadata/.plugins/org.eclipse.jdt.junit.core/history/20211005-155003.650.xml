@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TesteFramesEjanelas" project="CursoSelenium" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="TesteFramesEjanelas" time="9.943">
+    <testcase name="deveInteragirComFrame" classname="TesteFramesEjanelas" time="6.313"/>
+    <testcase name="deveInteragirComJanelas" classname="TesteFramesEjanelas" time="3.629"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TesteAlert" project="CursoSelenium" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="TesteAlert" time="10.235">
+    <testcase name="deveInteragirComAlertPrompt" classname="TesteAlert" time="5.906"/>
+    <testcase name="deveInteragirComAlertConfirm" classname="TesteAlert" time="2.176"/>
+    <testcase name="deveInteragirComAlertSimples" classname="TesteAlert" time="2.152"/>
+  </testsuite>
+</testrun>

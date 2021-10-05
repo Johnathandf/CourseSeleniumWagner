@@ -1,6 +1,7 @@
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -30,7 +31,7 @@ public class TesteCampoTreinamento {
 		
 		
 		//Fechar Driver
-		//driver.quit();
+		driver.quit();
 		
 		
 		
@@ -48,7 +49,7 @@ public class TesteCampoTreinamento {
 		Assert.assertEquals("teste", driver.findElement(By.id("elementosForm:sugestoes")).getAttribute("value"));
 		
 		//Fechar Driver
-		//driver.quit();
+		driver.quit();
 	
 	}
 	
@@ -63,7 +64,7 @@ public class TesteCampoTreinamento {
 		Assert.assertTrue(driver.findElement(By.id("elementosForm:sexo:0")).isSelected());
 		
 		//Fechar Driver
-		//driver.quit();
+		driver.quit();
 		
 		
 		
@@ -80,7 +81,7 @@ public class TesteCampoTreinamento {
 		Assert.assertTrue(driver.findElement(By.id("elementosForm:comidaFavorita:1")).isSelected());
 		
 		//Fechar Driver
-		//driver.quit();
+		driver.quit();
 
 	
 	}
@@ -101,7 +102,7 @@ public class TesteCampoTreinamento {
 		Assert.assertEquals("2o grau completo", combo.getFirstSelectedOption().getText());
 		
 		//Fechar Driver
-		//driver.quit();
+		driver.quit();
 	
 	}
 	
@@ -131,7 +132,7 @@ public class TesteCampoTreinamento {
 		
 		
 		//Fechar Driver
-		//driver.quit();
+		driver.quit();
 	}
 	
 	@Test
@@ -152,7 +153,7 @@ public class TesteCampoTreinamento {
 		
 		
 		//Fechar Driver
-		//driver.quit();
+		driver.quit();
 
 	}
 	
@@ -170,7 +171,49 @@ public class TesteCampoTreinamento {
 		Assert.assertEquals("Obrigado!", botao.getAttribute("value"));
 		
 		//Fechar Driver
-		//driver.quit();
+		driver.quit();
 		
 	}
+	
+	@Test
+	public void deveInteragirComLinks() {
+		WebDriver driver = new ChromeDriver();
+		
+		
+		driver.manage().window().maximize();
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		
+		driver.findElement(By.linkText("Voltar")).click();
+		//Assert.fail();
+		
+		Assert.assertEquals("Voltou!", driver.findElement(By.id("resultado")).getText());
+		
+		
+		//Fechar Driver
+		driver.quit();
+	}
+	
+	@Test
+	
+		public void deveBuscarTextosNaPagina() {
+		WebDriver driver = new ChromeDriver();
+		
+		
+		driver.manage().window().maximize();
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		
+		//Busca por TAG		
+		//Assert.assertTrue(driver.findElement(By.tagName("body")).getText().contains("Campo de Treinamento"));
+		
+		Assert.assertEquals("Campo de Treinamento", driver.findElement(By.tagName("h3")).getText());
+		
+		Assert.assertEquals("Cuidado onde clica, muitas armadilhas...", driver.findElement(By.className("facilAchar")).getText());
+		
+		//Fechar Driver
+		driver.quit();
+	}
+	
+	
+	
+	
 }
